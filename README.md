@@ -49,6 +49,14 @@ After adding git app in slack
 
 
 
+##### Reference site
+
+[RESTful history](https://www.martinfowler.com/articles/richardsonMaturityModel.html)
+
+
+
+
+
 #### Task1. Setting Spring boot
 
 1. Install JDK 1.2 or higher
@@ -185,5 +193,7 @@ http://localhost:8080/
 
 #### Task2. Print Hello World Locally.
 
+[Hello World](https://github.com/YeoKyuLi/Spring/blob/master/src/main/java/com/example/demo/web/WebController.java)
 
+Result: http://localhost:8080/hello
 
