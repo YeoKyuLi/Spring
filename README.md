@@ -29,8 +29,8 @@ After adding git app in slack
 
 - Spring Boot
 - Gradle
-- Java 1.8 or Higher
-- NoSQL DB
+- Java 14
+- NoSQL DB - Mongo DB
 - Spring Boot Test
 
 
@@ -45,7 +45,7 @@ After adding git app in slack
 
 ##### Spec
 
-1. JDK 1.4
+1. JDK 14
 
 
 
@@ -56,7 +56,7 @@ After adding git app in slack
 
 
 
-
+## W1
 #### Task1. Setting Spring boot
 
 1. Install JDK 1.2 or higher
@@ -196,4 +196,14 @@ http://localhost:8080/
 [Hello World](https://github.com/YeoKyuLi/Spring/blob/master/src/main/java/com/example/demo/web/WebController.java)
 
 Result: http://localhost:8080/hello
+
+
+
+## W2
+
+#### Task1. Connect MongoDB
+
+
+#### Task2. RESTful API
+
 
