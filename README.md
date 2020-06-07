@@ -27,11 +27,12 @@ After adding git app in slack
 
 ##### Goal from this project
 
-- Spring Boot
+- Spring Boot: 2.3.0
 - Gradle
 - Java 14
 - NoSQL DB - Mongo DB
 - Spring Boot Test
+- OS: Mac
 
 
 
@@ -202,6 +203,115 @@ Result: http://localhost:8080/hello
 ## W2
 
 #### Task1. Connect MongoDB
+
+
+
+
+
+##### Reference
+
+​	[Spring Boot Intergration Testing with Embedded MongoDB](https://www.baeldung.com/spring-boot-embedded-mongodb)
+
+​	[Accessing MongoDB Data with Rest](https://spring.io/guides/gs/accessing-mongodb-data-rest/)
+
+   [DB](https://velopert.com/436)
+
+##### install MongoDB
+
+
+
+```
+brew install mongodb
+```
+
+
+
+1. Downloaded below pack.
+
+   https://www.mongodb.com/dr/fastdl.mongodb.org/osx/mongodb-macos-x86_64-4.2.7.tgz/download
+
+2. PATH environment variable
+
+   ```
+   sudo cp /path/to/the/mongodb-directory/bin/* /usr/local/bin/
+   sudo ln -s  /path/to/the/mongodb-directory/bin/* /usr/local/bin/
+   sudo mkdir -p /usr/local/var/mongodb
+   sudo mkdir -p /usr/local/var/log/mongodb
+   whoami
+   yeokyuli
+   sudo chown yeokyuli /usr/local/var/mongodb
+   sudo chown yeokyuli /usr/local/var/log/mongodb
+   ```
+
+
+
+​							Check the Mongod
+
+![image-20200607140924954](/Users/yeokyuli/Library/Application Support/typora-user-images/image-20200607140924954.png)
+
+
+
+#### What is MongoDB and How to use it
+
+NoSQL: Not Only SQL. 관계형 DB가 아니므로, RDMS처럼 고정된 스키마 및 JOIN이 존재하지 않는다.
+
+![ffff](https://velopert.com/wp-content/uploads/2016/02/ffff.png)
+
+​		
+
+```
+mongod --dbpath /usr/local/var/mongodb --logpath /usr/local/var/log/mongodb/mongo.log --fork
+
+ps aux | grep -v grep | grep mongod
+
+
+mongo
+
+- use admin: 데이터베이스 스위치 혹은 생성
+- show dbs: 데이터 베이스 리스트 출력
+- show users
+- db: 현재 사용하고 있는 데이터베이스 출력
+- db.stats(): 현재 사용하고 있는 데이터 베이스 출력
+- db.dropDatabase() : db 삭제
+- db.createCollection(“todo”,{capped:true, size:6142800, max:10000})
+- db.book.insert({“name”:”abc”}) , single
+- db.<dbName>.drop()
+- db.dropUser()
+- db.dropUser("admin")
+- db.createUser(
+  {
+    user: "admin",
+    pwd: "admin",
+    roles: [ { "role" : "userAdminAnyDatabase", "db" : "admin" }, 
+    { "role" : "dbAdminAnyDatabase", "db" : "admin" }, 
+    { "role" : "readWriteAnyDatabase", "db" : "admin" } ]
+  }
+)
+- db.auth("id", "passward")
+- db.getUsers()
+- db.book.insert({"name": "toTolists", "author": "admin"})
+- db.createCollection("todo")
+- show collections
+- db.<collection name>.drop()
+```
+
+---> [Roles](https://docs.mongodb.com/manual/tutorial/manage-users-and-roles/)
+
+##### Setting and Develop 
+
+build.gradle
+
+```
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+```
+
+application.properties
+
+```
+spring.data.mongodb.uri=mongodb:://127.0.0.1:27017/MyDatabase
+```
+
+
 
 
 #### Task2. RESTful API
