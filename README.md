@@ -293,6 +293,9 @@ mongo
 - db.createCollection("todo")
 - show collections
 - db.<collection name>.drop()
+
+- show collections
+- db.<collection name>.find()
 ```
 
 ---> [Roles](https://docs.mongodb.com/manual/tutorial/manage-users-and-roles/)
@@ -316,4 +319,16 @@ spring.data.mongodb.uri=mongodb:://127.0.0.1:27017/MyDatabase
 
 #### Task2. RESTful API
 
+[Building a REST Service with Spring Boot and MongoDB ](https://medium.com/javarevisited/building-a-rest-service-with-spring-boot-and-mongodb-3aa5cd2dce73)
 
+[reference](https://imasoftwareengineer.tistory.com/35?category=772561)
+
+![img](https://t1.daumcdn.net/cfile/tistory/999007445C6E41B832)
+
+
+
+
+
+Testing result
+
+![image-20200620004329600](/Users/yeokyuli/Library/Application Support/typora-user-images/image-20200620004329600.png)
