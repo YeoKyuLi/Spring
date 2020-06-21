@@ -260,9 +260,10 @@ NoSQL: Not Only SQL. 관계형 DB가 아니므로, RDMS처럼 고정된 스키�
 ​		
 
 ```
+*** It will be run before executing mongod. 
 mongod --dbpath /usr/local/var/mongodb --logpath /usr/local/var/log/mongodb/mongo.log --fork
 
-ps aux | grep -v grep | grep mongod
+ps aux | grep -v grep | grep mongod 
 
 
 mongo
@@ -332,3 +333,12 @@ spring.data.mongodb.uri=mongodb:://127.0.0.1:27017/MyDatabase
 Testing result
 
 ![image-20200620004329600](/Users/yeokyuli/Library/Application Support/typora-user-images/image-20200620004329600.png)
+
+
+
+#### Task3. will be finish RESTful API
+
+Sptring restDOD
+
+- CRUD
+- Testing Code

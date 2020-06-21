@@ -4,12 +4,11 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Data
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document(collation = "todo")
+@Document
 public class Todo {
 
     @Id

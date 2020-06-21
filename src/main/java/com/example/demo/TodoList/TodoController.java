@@ -1,5 +1,6 @@
 package com.example.demo.TodoList;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,17 +10,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/todo")
 public class TodoController {
-    @Autowired
-    private TodoService todoService;
+    private final TodoService todoService;
 
-    @GetMapping(value = "/")
+//    public TodoController(TodoService todoService) {
+//        this.todoService = todoService;
+//    }
+
+    @GetMapping
     public List<Todo> getAllToDoLists(){
         return todoService.findAll();
     }
 
-    @PostMapping(value ="/")
+    @PostMapping
     public ResponseEntity<?> saveOrUpdateTodo(@RequestBody Todo todo)
     {
         todoService.saveOrUpdateTodo(todo);
