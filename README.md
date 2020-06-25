@@ -342,3 +342,17 @@ Sptring restDOD
 
 - CRUD
 - Testing Code
+
+#### Reference
+1. [RESTFul](http://www.namooz.com/2016/12/10/spring-boot-restful-web-service-example-get-post-put-delete-patch/)
+2. [put](https://m.blog.naver.com/todangs/220995661560)
+3. [api](https://daddyprogrammer.org/post/404/spring-boot2-design-api-interface-and-data-structure/)
+4. [api](https://brunch.co.kr/@springboot/59)
+5. [api design](https://docs.microsoft.com/ko-kr/azure/architecture/best-practices/api-design#organize-the-api-around-resources)
+6. [multi instance](https://wickies.tistory.com/102)
+7. [mutl](https://www.logicbig.com/tutorials/spring-framework/spring-cloud/load-balancing-and-multiple-microservice-instances.html)
+8. [secssion](https://github.com/spring-projects/spring-session/tree/1.0.1.RELEASE/samples/users/src)
+9. [design](http://blog.naver.com/PostView.nhn?blogId=koys007&logNo=220796287816&parentCategoryNo=&categoryNo=74&viewDate=&isShowPopularPosts=false&from=postView)
+10. [REST 연재-1회](https://bcho.tistory.com/321)
+11. [design](https://www.mimul.com/blog/web-api-design-from-apigee/)
+12. [multi](https://stackoverflow.com/questions/42378023/how-to-get-multiple-instances-of-same-bean-in-spring)
